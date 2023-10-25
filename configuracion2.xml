@@ -1,0 +1,57 @@
+<framework>
+	<data-access>
+		<connection-pool usr="root"
+						pwd="sasa"
+						driver="com.mysql.cj.jdbc.Driver"
+						url="jdbc:mysql://localhost:3306/empresa"
+						minsize="8"
+						maxsize="3"
+						steep="3"></connection-pool>
+		
+		<mapping>
+			<table name="DEPT" type="libro.cap04.dtos.DepartamentoDto">
+				<field name="idDepartamento"
+					att="idDepartamento"
+					pk="true"/>
+					
+				<field name="depNombre"
+					att="nombre"/>
+					
+				<field name="depLocacion"
+					att="locacion"/>
+			</table>
+			
+			<table name="EMP" type="libro.cap04.dtos.EmpleadoDto">
+				
+				<field name="idEmpleado"
+					att="idEmpleado"
+					pk="true"/>
+					
+				<field name="EmpNombre"
+					att="nombre"/>
+					
+				<field name="EmpFechaContrato"
+					att="fechaContrato"/>
+					
+				<field name="idDepartamento"
+					att="idDepartamento"/>	
+					
+			</table>
+		</mapping>
+	</data-access>
+	
+	<!-- Mapeo de beans para implementar un factory -->
+	<bean-access>
+		<bean name="FACADE"
+			type="libro.cap04.FacadeRmiImpl"
+			singleton="False"></bean>
+			
+		<bean name="EMP"
+			type="libro.cap04.EmpleadoDaoMysqlImpl"
+			singleton="True"></bean>
+			
+		<bean name="FACADE"
+			type="libro.cap04.DepartamentoDao"
+			singleton="True"></bean>
+	</bean-access>
+</framework>

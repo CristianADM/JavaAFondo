@@ -1,0 +1,35 @@
+<conection-pool>
+	<jdbc>
+		<conection name="mysqlconnection"
+		user="root"
+		password="sasa"
+		driver="com.mysql.cj.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/empresa" />
+		
+		<conection name="oracleconnection"
+		user="scot"
+		password="1234"
+		driver="jdbc.oracle.driver.OracleDriver"
+		url="jdbc:oracle:thin:@1521:ORCL" />
+	</jdbc>
+	
+	<pools>
+		<pool name="P1"
+			connection="mysqlconnection"
+			minsize="3"
+			maxsize="8"
+			steep="2" />
+			
+		<pool name="P2"
+			connection="mysqlconnection"
+			minsize="10"
+			maxsize="30"
+			steep="5" />
+			
+		<pool name="P1"
+			connection="oracleconnection"
+			minsize="5"
+			maxsize="10"
+			steep="2" />
+	</pools>
+</conection-pool>
