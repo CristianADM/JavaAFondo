@@ -75,4 +75,15 @@ public class XSession {
 			}
 		}
 	}
+	
+	private String _obtenerListaDeCampos(Class dto) {
+		XTag[] fields = UXml.getFieldsTAG(dto.getName());
+		
+		String ret = "";
+		for (int i = 0; i < fields.length; i++) {
+			ret += fields[i].getAtts().get("name") + ((i<fields.length-1) ? ", " : "");
+		}
+		
+		return ret;
+	}
 }
