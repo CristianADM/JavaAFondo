@@ -53,5 +53,9 @@
 		<bean name="FACADE"
 			type="libro.cap04.DepartamentoDao"
 			singleton="True"></bean>
+			
+		<bean name="DEPARTAMENTO"
+			type="libro.cap04.DepartamentoDao"
+			singleton="True"/>
 	</bean-access>
 </framework>

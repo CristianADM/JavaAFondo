@@ -1,7 +1,9 @@
-¡package libro.cap12.framework.test;
+package libro.cap12.framework.test;
 
 import libro.cap04.dtos.DepartamentoDto;
 import libro.cap04.dtos.EmpleadoDto;
+import libro.cap12.framework.xml.XFactory;
+import libro.cap12.framework.xml.XSession;
 
 public class TestDB1 {
 
