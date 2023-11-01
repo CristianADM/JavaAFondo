@@ -2,20 +2,24 @@ package libro.cap12.framework.test;
 
 import java.sql.Date;
 
+import libro.cap12.framework.annotations.Colum;
+import libro.cap12.framework.annotations.Pk;
+import libro.cap12.framework.annotations.Table;
+
 @Table(name="Emp")
 public class EmpleadoDto {
 
 	@Pk
-	@Column(name="Id_Empleado")
-	private int idEmpleado
+	@Colum(name="Id_Empleado")
+	private int idEmpleado;
 	
-	@Column(name="nombre")
+	@Colum(name="nombre")
 	private String nombre;
 	
-	@Column(name="fecha_contratacion")
+	@Colum(name="fecha_contratacion")
 	private Date fechaContatado;
 	
-	@Column(name="id_Departamento")
+	@Colum(name="id_Departamento")
 	private int idDepartamento;
 
 	public String getNombre() {

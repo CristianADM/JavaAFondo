@@ -5,6 +5,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import libro.cap12.framework.annotations.Colum;
+import libro.cap12.framework.annotations.Pk;
+import libro.cap12.framework.annotations.Table;
+
 public class XSession {
 
 	public Object findByPrimaryKey(Class dtoClass, Object pk) {
@@ -99,7 +103,7 @@ public class XSession {
 	private String _obtenerNombreDeTabla(Class<?> dtoClass) {
 		try {
 			Table table = dtoClass.getAnnotation(Table.class);
-			return table.name;
+			return table.name();
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

@@ -43,20 +43,18 @@
 	
 	<!-- Mapeo de beans para implementar un factory -->
 	<bean-access>
-		<bean name="FACADE"
-			type="libro.cap04.FacadeRmiImpl"
-			singleton="False"></bean>
+		
+		<bean name="DEPARTAMENTO"
+			type="libro.cap12.app.def.imple.DepartamentoDaoImplXFrm"
+			singleton="True"/>
 			
 		<bean name="EMP"
-			type="libro.cap04.EmpleadoDaoMysqlImpl"
+			type="libro.cap12.app.def.imple.EmpleadoDaoImplXFrm"
 			singleton="True"></bean>
-			
+		
 		<bean name="FACADE"
-			type="libro.cap04.DepartamentoDao"
-			singleton="True"></bean>
-			
-		<bean name="DEPARTAMENTO"
-			type="libro.cap04.DepartamentoDao"
+			type="libro.cap12.app.def.imple.FacadeImpleXFrm"
 			singleton="True"/>
+			
 	</bean-access>
 </framework>

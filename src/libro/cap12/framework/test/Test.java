@@ -9,7 +9,7 @@ public class Test {
 		
 		XFactory.load("configuracion2.xml");
 		
-		DepartamentoDao depDao = XFactory.getInstancia().getBean("DEPARTAMENTO");
+		DepartamentoDao depDao = (DepartamentoDao) XFactory.getInstancia().getBean("DEPARTAMENTO");
 		
 		System.out.println(depDao);
 	}

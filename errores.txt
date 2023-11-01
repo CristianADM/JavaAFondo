@@ -1,0 +1,2 @@
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+	at libro.cap13.Demo2.main(Demo2.java:27)
